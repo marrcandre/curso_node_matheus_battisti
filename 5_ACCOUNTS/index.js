@@ -3,6 +3,8 @@ const chalk = require('chalk')
 
 const fs = require('fs')
 
+console.log(chalk.bgBlue.black('Bem-vindo ao Accounts!'))
+
 operation()
 
 function operation() {
