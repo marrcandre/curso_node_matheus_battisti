@@ -12,5 +12,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, () => {
-  console.log(`Servidor rodando na porta: ${port}`);
+  console.log(`Servidor rodando em: http://localhost:${port}`);
 });
