@@ -18,7 +18,7 @@ module.exports = class TaskController {
   }
 
   static showTasks(req, res) {
-    Task.findAll({ raw: true })
+    Task.findAll({ raw: true, order: [['updatedAt', 'DESC']] })
       .then((data) => {
         let emptyTasks = false
 

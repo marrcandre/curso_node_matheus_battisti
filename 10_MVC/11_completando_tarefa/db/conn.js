@@ -1,10 +1,9 @@
 const { Sequelize } = require('sequelize')
 
-const sequelize = new Sequelize('nodemvc', 'root', '', {
-  host: 'localhost',
-  dialect: 'mysql',
-})
-
+const sequelize = new Sequelize({
+    dialect: 'sqlite',
+    storage: './database.sqlite'
+  })
 try {
   sequelize.authenticate()
   console.log('Conectamos com o Sequelize!')
