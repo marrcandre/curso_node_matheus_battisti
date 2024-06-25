@@ -17,9 +17,10 @@
       </a>
       <ul>
         <li><a href="/">Pensamentos</a></li>
-        {{#if session.userid}}    
+        {{#if session.userid}}
           <li><a href="/toughts/dashboard">Dashboard</a></li>
           <li><a href="/logout">Sair</a></li>
+          <li>{{session.email}}</li>
         {{else}}
           <li><a href="/login">Entrar</a></li>
           <li><a href="/register">Registrar</a></li>
@@ -40,7 +41,7 @@
       {{{ body }}}
     </div>
     <footer>
-      <p><span>Toughts</span> &copy; 2021</p>
+      <p><span>Toughts</span> &copy; 2024</p>
     </footer>
   </body>
 </html>

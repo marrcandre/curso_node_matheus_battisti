@@ -268,8 +268,8 @@ form input[type='submit']:hover,
 }
 
 .toughts-container blockquote {
-  font-style: italic;
-  font-size: 2em;
+  /* font-style: italic; */
+  font-size: 1.5em;
   margin-bottom: 0.4em;
 }
 

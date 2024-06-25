@@ -34,6 +34,7 @@ module.exports = class UserController {
 
     // auth user
     req.session.userid = user.id
+    req.session.email = user.email
 
     req.flash('message', 'Login realizado com sucesso!')
 
@@ -80,11 +81,12 @@ module.exports = class UserController {
       .then((user) => {
         // initialize session
         req.session.userid = user.id
+        req.session.email = user.email
 
         // console.log('salvou dado')
         // console.log(req.session.userid)
 
-        req.session.userid = user.id
+        // req.session.userid = user.id
 
         req.flash('message', 'Cadastro realizado com sucesso!')
 
