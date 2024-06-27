@@ -10,6 +10,7 @@ app.use(
 
 app.use(express.json())
 
+// Rotas / Endpoints
 app.get('/', (req, res) => {
   res.json({ message: 'Primeira rota criada com sucesso!' })
 })
