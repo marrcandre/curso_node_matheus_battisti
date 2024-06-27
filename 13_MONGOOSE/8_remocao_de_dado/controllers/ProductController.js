@@ -4,7 +4,7 @@ module.exports = class ToughController {
   static async showProducts(req, res) {
     const products = await Product.find({}).lean()
 
-    console.log(products)
+    // console.log(products)
 
     res.render('products/all', { products })
   }
@@ -53,18 +53,22 @@ module.exports = class ToughController {
   }
 
   static async editProductPost(req, res) {
+    // Pega os dados do formulário
     const id = req.body.id
     const name = req.body.name
     const price = req.body.price
     const description = req.body.description
     const image = req.body.image
 
-    console.log(req.body)
+    // console.log(req.body)
 
+    // Cria um objeto com os dados do formulário
     const product = { name, price, description, image }
 
+    // Atualiza o produto no banco de dados
     await Product.updateOne({ _id: id }, product)
 
+    // Redireciona para a página de produtos
     res.redirect('/products')
   }
 }
